@@ -35,19 +35,19 @@ body {
 	text-transform: uppercase;
 	text-shadow: 2px 2px black;
 	font-size: 40px;
-	margin: 20px;
+	margin: 15px;
 	letter-spacing: 5px;
 }
 
 .container h2 {
-	margin: 15px;
+	margin: 25px;
 	font-size: 20px;
 	font-weight: 500;
 	font-style: italic;
 }
 
 .count {
-	margin: 155px 0;
+	margin: 100px 0;
 }
 
 .countd {
@@ -69,6 +69,73 @@ body {
 
 hr {
 	margin: auto;
-	width: 80%;
+	width: 70%;
 	border: 1.5px solid #fff;
+}
+
+button {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+button {
+	background: none;
+	color: #fff;
+	width: 180px;
+	height: 50px;
+	border: 1.5px solid #fff;
+	font-size: 18px;
+	border-radius: 4px;
+	transition: .6s;
+	overflow: hidden;
+}
+
+button:focus {
+	outline: none;
+}
+
+button:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	background: rgba(255,255,255,.5);
+	width: 60px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	opacity: .5s;
+	filter: blur(30px);
+	transform: translateX(-130px) skewX(-15deg);
+}
+
+button:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	background: rgba(255,255,255,.2);
+	width: 30px;
+	height: 100%;
+	left: 30px;
+	top: 0;
+	opacity: 0;
+	filter: blur(30px);
+	transform: translateX(-100px) skewX(-15deg);
+}
+
+button:hover {
+	background: #000000;
+	cursor: pointer;
+}
+
+button:hover:before {
+	transform: translateX(300px) skewX(-15deg);
+	opacity: .6;
+	transition: .7s;
+}
+
+.link {
+	color: #fff;
+	text-decoration: none;
 }
