@@ -75,7 +75,7 @@ hr {
 
 button {
 	position: absolute;
-	top: 80%;
+	top: 105%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -139,3 +139,50 @@ button:hover:before {
 	color: #fff;
 	text-decoration: none;
 }
+
+.info p {
+	padding: 0;
+}
+
+.info input {
+	width: 30%;
+	text-align: center;
+}
+
+.info input[type="text"] {
+	background: none;
+	border: none;
+	outline: none;
+	height: 30px;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-size: 16px;
+	position: absolute;
+	top: 92%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+::placeholder {
+	color: #fff;
+}
+
+.alert {
+	text-align: center;
+	background: #79c879;
+	color: #fff;
+	padding: 5px;
+	position: absolute;
+	left: 50%;
+	top: 82%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+
+
+
+
+
+
+
+

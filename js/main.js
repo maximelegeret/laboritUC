@@ -1,3 +1,6 @@
+// Reference messages collection
+var messageRef = firebase.database().ref("messages");
+
 var count = new Date("nov 1,2018 00:00:00").getTime();
 var x = setInterval(function() {
 	var now = new Date().getTime();
@@ -18,7 +21,7 @@ var x = setInterval(function() {
 $(document).ready(function() {
 
 	var $randomnbr = $(".nbr");
-	var $timer = 22;
+	var $timer = 35;
 	var $it;
 	var $data = 0;
 	var index;
@@ -58,7 +61,38 @@ $(document).ready(function() {
 
      });
 
+//Listen for form submit
 
+document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+function submitForm(e){
+	e.preventDefault();
+
+	//Get values
+	var email = getInputVal("email");
+	
+	saveMessage(email);
+	document.querySelector(".alert").style.display = "block";
+
+	setTimeout(function(){
+	document.querySelector(".alert").style.display = "none";
+	},2000);
+
+	document.getElementById("contactForm").reset();
+}
+
+// Function to get form values
+function getInputVal(id) {
+	return document.getElementById(id).value;
+}
+
+// Function to save message to firebase
+function saveMessage (email) {
+	var newMessageRef = messageRef.push();
+	newMessageRef.set({
+		email: email,
+	});
+};
 
 
 

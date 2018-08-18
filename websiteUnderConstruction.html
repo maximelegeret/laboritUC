@@ -60,13 +60,36 @@
 			</div>
 
 		</div>
-	</div>
-	<div class="wrapper">
-		<div class="btn">
-			<button type="button"><a class="link" href="mailto:maxime.legeret@bluewin.ch">Email Us!</a></button>
+		<div class="wrapper">
+			<div class="info">
+				
+				<form id="contactForm">
+					<p>
+						<input type="text" name="email" id="email" required placeholder="Enter your email and get notified">
+					</p>
+					<div class="btn">
+						<button type="submit">Submit!</button>
+					</div>
+					<div class="alert">Your email has been saved</div>
+				</form>
+				
+			</div>
 		</div>
 	</div>
 	
+	<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+	  	var config = {
+		    apiKey: "AIzaSyABoVysGvtn7D25z5YP2AD-4NgWN2yvn80",
+		    authDomain: "laboritconstruction.firebaseapp.com",
+		    databaseURL: "https://laboritconstruction.firebaseio.com",
+		    projectId: "laboritconstruction",
+		    storageBucket: "laboritconstruction.appspot.com",
+		    messagingSenderId: "887917665702"
+  		};
+  		firebase.initializeApp(config);
+	</script>
     <script src="js/main.js"></script>
 
 </body>
