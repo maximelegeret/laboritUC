@@ -1,7 +1,7 @@
 // Reference messages collection
 var messageRef = firebase.database().ref("messages");
 
-var count = new Date("nov 1,2018 00:00:00").getTime();
+var count = new Date("nov 4,2018 00:00:00").getTime();
 var x = setInterval(function() {
 	var now = new Date().getTime();
 	var d = count - now;
